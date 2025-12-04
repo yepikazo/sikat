@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'hywenhei';
+    src: url(src/zh-cn.ttf);
+}
+
 /* --- General Styling --- */
 body {
-    font-family: sans-serif;
+    font-family: 'hywenhei';
     margin: 0;
     padding: 0;
     background-color: #f0f0f0; /* Latar belakang abu-abu muda */
@@ -69,6 +74,8 @@ body {
     display: flex;
     justify-content: center;
     padding: 50px 20px;
+    width: 100%;
+    /* background-color: black; */
 }
 
 .progress-card {
@@ -82,6 +89,8 @@ body {
 }
 
 .header-progress {
+    font-family: 'hywenhei';
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,7 +146,7 @@ body {
 }
 
 .module-table th, .module-table td {
-    padding: 15px;
+    /* padding: 15px; */
     border: 1px solid #ff6600;
     text-align: left;
     font-size: 18px;
@@ -150,10 +159,7 @@ body {
 }
 
 /* Styling for the large empty cells */
-.module-table td {
-    height: 200px; /* Memberi tinggi agar terlihat besar seperti di gambar */
-    vertical-align: top;
-}
+
 
 .module-table td:first-child {
     width: 50%;

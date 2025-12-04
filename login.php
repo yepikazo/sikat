@@ -64,7 +64,7 @@ session_start();
                     <span>Atau</span>
                 </div>
 
-                <a href="daftar.php" class="btn-black">Daftar</a>
+                <a href="regis.php" class="btn-black">Daftar</a>
             </form>
         </div>
     </div>

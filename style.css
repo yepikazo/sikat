@@ -65,8 +65,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    width: 10rem;
-    height: 2rem;
+    width: 12rem;
+    height: 3rem;
 }
 
 .gambar {
@@ -82,7 +82,7 @@ body {
 
 .navbar {
     border-bottom: 5px solid;
-    border-color: #FF4D00;
+    /* border-color: #FF4D00; */
     font-family: 'hywenhei';
 }
 
@@ -151,20 +151,115 @@ body {
     padding: 10px 20px;
 }
 
-.logreg{
-    /* margin-left: auto;    
-    display: flex;
-    flex-direction: row;
-    align-items: center; */
-    background-color: firebrick;
+
+.navbar-nav .nav-link {
+    font-family: 'hywenhei';
+    font-weight: 500;
+}
+
+.navbar {
+    border-bottom: 5px solid #FF4D00;
 }
 
 nav{
-    display: flex;
-    align-items: center;
+    background-color: #D8D8D8;
 }
 
-.logreg a{
-    text-decoration: none;
+main{
+    background-color: white;
+}
 
+.btn-user {
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+    align-items: center;
+    border: #FF4D00 2px solid;
+    background-color: white;
+    color: #FF4D00 !important;
+    padding: 8px;
+    border-radius: 30px;
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+
+.btn-user.dropdown-toggle::after {
+    display: none; /* Hilangin ikon panah */
+}
+
+.dropdown-menu {
+    border-radius: 12px;
+    padding: 8px 0;
+}
+
+
+.btn-signup {
+    border: 2px solid #FF4D00;
+    padding: 6px 18px;
+    border-radius: 6px;
+    margin-right: 8px;
+    background-color: white;
+    text-decoration: none;
+    color: #FF4D00;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: #FF4D00;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-logout {
+    background-color: transparent;
+    color: #555;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-logout:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+
+.logreg a{
+    text-decoration: none;
+
+}
+
+.tips{
+    /* background-color: #FCCC41; */
+    margin: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    align-items: center;
+    /* width: 10rem; */
+    /* height: auto; */
+}
+
+.tipslink{
+    /* float: right; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20rem;
+    background-color: #FCCC41;
+    padding: 5px;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.now{
+    color: #FF4D00;
 }

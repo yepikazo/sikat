@@ -1,18 +1,16 @@
 <?php
-    session_start();
-    include 'koneksi.php';
-    $query =  "SELECT * FROM `modul belajar`;";
-    $sql = mysqli_query($conn, $query);
-    // echo $_SESSION['tb_user']['username'];
+include 'koneksi.php';
+
+session_start();
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulasi Investasi</title>
+    <link rel="stylesheet" href="investasi.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link
@@ -26,9 +24,8 @@
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
     <script src="js/bootstrap.bundle.min.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
         <div class="container-fluid">
                 <!-- Logo kiri -->
@@ -46,11 +43,11 @@
                         <a class="nav-link" href="index.php">home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle now" href="#" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             modul
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item now" href="modul.php">akses modul</a></li>
+                            <li><a class="dropdown-item" href="modul.php">akses modul</a></li>
                             <?php if(!isset($_SESSION['tb_user'])) { ?>
                                 <li><p class="dropdown-item">lihat progress</p></li>
                             <?php } else { ?>
@@ -59,12 +56,12 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle now" href="#" data-bs-toggle="dropdown">
                             simulasi
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="tabungan.php">simulasi tabungan</a></li>
-                            <li><a class="dropdown-item" href="investasi.php">simulasi investasi</a></li>
+                            <li><a class="dropdown-item now" href="investasi.php">simulasi investasi</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -88,37 +85,29 @@
             </div>
         </div>
     </nav>
+
     <main>
-        <div class="konten">
-        <?php
-        while($result = mysqli_fetch_assoc($sql)){
-        ?>
-        <form method="POST" class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <?php
-                    echo $result['judul modul'];
-                    ?>
-                </h5>
-                <p class="card-text">
-                    <?php
-                    echo $result['deskripsi'];
-                    ?>
-                </p>
-                <a href="simpan_progress.php?id_modul=<?php echo $result['id_modul']; ?>"
-                class="card-link" name="pelajari" >Pelajari</a>
-            </div>
-        </form>
-        <?php
-        }
-        ?>
+      <div class="container">
+        <div class="form-section">
+          <label>Masukkan bunga</label>
+          <input id="bunga" type="text" class="input-field" />
+          <label>Masukkan modal</label>
+          <input id="modal" type="text" class="input-field" />
+          <label>Masukkan tenor(bulanan)</label>
+          <input id="tenor" type="text" class="input-field" />
+          <button id="simulasiInvestasi" class="simulasi-button">Lakukan simulasi</button>
+        </div>
+        <div class="result-section">
+          <p id="hasilKata"></p>
+          <p  class="profit"></p>
+          <div class="grafik-placeholder">
+            <canvas id="grafikInvestasi"></canvas>
+          </div>
+        </div>
+      </div>
     </main>
-    <div class="tips">
-    <a class="tipslink" href="tips.php">
-        <i class="ph ph-info"></i>
-        tips keuangan
-        <a>
-    </div>
-</body>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="investasi.js"></script>
 
 </html>

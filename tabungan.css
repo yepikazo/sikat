@@ -160,8 +160,8 @@ main {
   padding: 12px 25px;
   border-radius: 23px;
   cursor: pointer;
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 1rem;
+
 
   /* PERUBAHAN DI SINI: Untuk menggeser ke kanan */
   display: block; /* Biarkan block agar margin auto bekerja penuh */
