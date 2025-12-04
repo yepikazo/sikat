@@ -1,0 +1,137 @@
+/* Pengaturan dasar dan font */
+body {
+    font-family: 'Kanit', sans-serif; /* Menggunakan font Kanit */
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: auto; 
+}
+
+/* Container utama formulir - Box Putih */
+.registration-container {
+    background-color: #ffffff;
+    /* Padding horizontal 80px, vertikal 30px */
+    padding: 30px 80px; 
+    
+    /* Sudut melengkung */
+    border-radius: 30px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Margin luar 20px */
+    margin: 20px; 
+    /* Lebar DICESUAIKAN: 1150px */
+    width: 1150px; 
+    /* Tinggi yang memastikan konten muat */
+    min-height: 550px; 
+
+    box-sizing: border-box;
+
+    /* MEMUSATKAN KONTEN: Diatur sebagai flex-container */
+    display: flex;
+    flex-direction: column; 
+    /* Memusatkan semua turunan (kecuali header) */
+    align-items: center; 
+}
+
+/* Header dan Logo SIKAT - Dibuat rata kiri */
+.header {
+    margin-bottom: 30px;
+    width: 100%;
+    /* Memaksa header rata kiri (menimpa align-items: center;) */
+    align-self: flex-start; 
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Menghapus margin default h2 */
+}
+
+.logo-sikat {
+    color: #ff5500; /* SIK Oranye */
+    font-size: 30px;
+    font-weight: 900;
+    /* Jarak antar huruf ditingkatkan menjadi 4px */
+    letter-spacing: 4px; 
+}
+
+.logo-accent {
+    color: #333; /* AT Hitam */
+}
+
+/* KONTROL LEBAR FORMULIR */
+.registration-form {
+    /* Lebar formulir (input akan mengikuti ini) */
+    max-width: 500px; 
+    width: 100%;
+}
+
+
+/* Pengaturan Group Form - Jarak Vertikal Dikurangi */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Pengaturan Input - Lebar Ditetapkan 500px dan Sudut Melengkung 10px */
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    /* Panjang kolom input 500px */
+    max-width: 500px; 
+    width: 100%; 
+
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Sudut melengkung dikurangi menjadi 10px */
+    box-sizing: border-box; 
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff5500;
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder {
+    color: #a0a0a0;
+}
+
+/* Tombol Register - Lebih Pendek, Tengah, dan Setengah Lingkaran/Kapsul */
+.register-button {
+    /* Lebar tombol dikurangi (250px) */
+    max-width: 250px; 
+    width: 100%;
+
+    padding: 12px 0;
+    background-color: #ff5500;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* Dibuat sangat melengkung (setengah lingkaran) */
+    cursor: pointer;
+    
+    /* PENTING: Untuk memusatkan tombol yang lebih pendek */
+    display: block;
+    margin: 20px auto 0 auto; /* Menggunakan margin auto untuk pemusatan horizontal */
+
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+.register-button:hover {
+    background-color: #e64d00;
+    box

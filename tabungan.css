@@ -1,0 +1,206 @@
+:root {
+  --orange-color: #ff4d00;
+}
+
+body {
+  /* CATATAN: Background body diubah kembali ke #F0F2F5 agar ada kontras */
+  margin: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* font-family: 'hywenhei'; */
+}
+
+header {
+  background-color: #f0f2f5; /* Diubah agar header putih sesuai gambar */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--orange-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 80px; /* Ukuran yang lebih sesuai untuk logo */
+  width: auto;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+/* nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+nav ul li a .arrow {
+  margin-left: 5px;
+  font-size: 0.9em;
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.auth-buttons button {
+  background-color: transparent;
+  border: 1px solid var(--orange-color);
+  color: var(--orange-color);
+  padding: 8px 15px;
+  border-radius: 23px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  /* font-family: "HYWenHei"; */
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons .sign-up:hover {
+  background-color: var(--orange-color);
+  color: white;
+}
+
+.auth-buttons .login {
+  background-color: var(--orange-color);
+  color: white;
+  border-color: var(--orange-color);
+}
+
+.auth-buttons .login:hover {
+  background-color: #e04500;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* KOTAK INPUT (FORM SECTION) TETAP DENGAN BORDER PENUH */
+.form-section {
+  background-color: white;
+  border: 2px solid var(--orange-color);
+  border-radius: 10px;
+  /* PERUBAHAN DI SINI: Padding bawah diubah dari 15px menjadi 10px */
+  padding: 30px 30px 30px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* MODIFIKASI: Hapus semua border pada RESULT SECTION */
+.result-section {
+  background-color: white;
+
+  /* MENGHAPUS SEMUA BORDER ORANYE DAN SHADOW */
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  padding: 30px;
+}
+
+.form-section h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  /* Border input field oranye FF4D00 */
+  border: 1px solid var(--orange-color);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.simulasi-button {
+  background-color: var(--orange-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 23px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+
+  /* PERUBAHAN DI SINI: Untuk menggeser ke kanan */
+  display: block; /* Biarkan block agar margin auto bekerja penuh */
+  width: fit-content;
+  margin-left: auto; /* Menggeser elemen ke kanan penuh */
+  margin-top: 10px;
+  /* ... */
+  transition: background-color 0.3s;
+}
+
+.simulasi-button:hover {
+  background-color: #e04500;
+}
+
+.result-section p {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.result-section .profit {
+  color: var(--orange-color);
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.grafik-placeholder {
+  width: 100%;
+  height: 300px;
+  /* KOTAK INI TETAP BERBORDER ORANYE */
+  border: 2px solid var(--orange-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange-color);
+  font-size: 1.2em;
+  background-color: #f9f9f9;
+}

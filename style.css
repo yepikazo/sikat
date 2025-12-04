@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'hywenhei';
+    src: url(src/zh-cn.ttf);
+}
+
+@font-face {
+    font-family: 'nicoMoji';
+    src: url(src/NicoMoji-Regular.ttf);
+}
+
+main {
+    display: flex;
+    margin-top: 2rem;
+}
+
+body {
+    /* CATATAN: Background body diubah kembali ke #F0F2F5 agar ada kontras */
+    font-family: "HYWenHei";
+    margin: 0;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.konten {
+    padding: 2rem;
+    margin: 1rem;
+    /* background-color: #575757; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.judul {
+    display: flex;
+    font-family: 'nicoMoji';
+}
+
+.si {
+    font-size: 10rem;
+    color: #FF4D00;
+    margin: 0;
+}
+
+.kat {
+    font-size: 10rem;
+    color: #000;
+    margin: 0;
+
+}
+
+.kepanjangan {
+    font-family: 'hywenhei';
+    font-size: 2rem;
+}
+
+.tombol {
+    background-color: #FF4D00;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+}
+
+.gambar {
+    padding: 2rem;
+    margin: 1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100vh;
+    height: 80vh;
+}
+
+
+.navbar {
+    border-bottom: 5px solid;
+    border-color: #FF4D00;
+    font-family: 'hywenhei';
+}
+
+.daftarModul {
+    list-style-type: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.daftarModul a {
+    background-color: #b1b1b1;
+    width: 100vh;
+    height: 4rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.isiModul {
+    padding: 2rem;
+    margin: 1rem;
+    border-color: black;
+    border: 5px solid;
+}
+
+.isiModul h1 {
+    color: orangered;
+    font-weight: bolder;
+}
+
+.isiModul h2 {
+    color: orangered;
+    font-weight: bold;
+}
+
+.isiModul h3 {
+    color: orangered;
+    font-weight: normal;
+}
+
+.isiMateri {
+    text-align: justify;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body a{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: orangered;
+    border-radius: 2rem;
+    width: 120px;
+    height: 40px;
+    padding: 10px 20px;
+}
+
+.logreg{
+    /* margin-left: auto;    
+    display: flex;
+    flex-direction: row;
+    align-items: center; */
+    background-color: firebrick;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.logreg a{
+    text-decoration: none;
+
+}
